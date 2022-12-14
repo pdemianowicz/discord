@@ -1,6 +1,6 @@
 # Wordpress theme - Discord
 
-![](./screenshoot.jpg)
+![screenshot](./screenshot.jpg)
 
 ## Welcome! 👋
 
@@ -12,7 +12,7 @@ This is my first working wordpress theme.
 
 #
 
-or check if my local machine is running [Live Demo](spotless-sample.localsite.io)
+or check if my local machine is running [Live Demo](https://spotless-sample.localsite.io/)
 
 login: reward
 
