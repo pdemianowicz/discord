@@ -1,0 +1,11 @@
+.button {
+  padding: 0.75rem 2rem;
+  border-radius: 2.8rem;
+  font-family: "gg sans medium";
+  color: $secondary-color;
+  background-color: $white;
+  &:hover {
+    opacity: 80%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+}

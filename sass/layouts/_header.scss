@@ -1,0 +1,21 @@
+.site-header {
+  background-color: $primary-color;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 8rem;
+
+    .logo {
+      width: 12rem;
+    }
+
+    .login-btn {
+      @media (max-width: $medium) {
+        margin-right: 5.5rem;
+      }
+    }
+  }
+}

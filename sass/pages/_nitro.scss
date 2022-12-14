@@ -1,0 +1,318 @@
+.page-nitro {
+  &__hero {
+    background: rgb(227, 137, 207);
+    background: linear-gradient(0deg, rgba(227, 137, 207, 1) 25%, rgba(64, 78, 237, 1) 75%);
+    text-align: center;
+    color: $white;
+
+    .container {
+      max-width: 420px;
+      padding: 2.5rem;
+      @include mq(small) {
+        max-width: 1180px;
+        display: grid;
+        grid-template-columns: 4fr 8fr;
+        align-items: center;
+        justify-items: center;
+        text-align: left;
+        padding-bottom: 20rem;
+      }
+
+      h1 {
+        line-height: 0.8;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .subscribe-plan {
+    .container {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      @include mq(small) {
+        flex-direction: row;
+        margin-top: -180px;
+      }
+    }
+
+    .card {
+      color: $white;
+      background-color: #007cc2;
+      padding: 2.5rem;
+      border-radius: 8px;
+      width: 100%;
+      max-height: 450px;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.7rem;
+      &:last-child {
+        background: rgb(179, 69, 193);
+        background: linear-gradient(313deg, rgba(179, 69, 193, 1) 32%, rgba(133, 71, 198, 1) 78%);
+      }
+
+      h2 {
+        font-family: "gg sans bold italic";
+        text-transform: uppercase;
+        line-height: 1;
+      }
+
+      ul {
+        padding: 2rem 0;
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem;
+          }
+        }
+      }
+
+      button {
+        padding: 1.25rem;
+        width: 100%;
+        margin-top: auto;
+      }
+    }
+  }
+
+  .nitro-perks {
+    .container {
+      margin-top: 8rem;
+      text-align: center;
+
+      ul {
+        display: grid;
+        gap: 2rem;
+        padding: 2.5rem;
+        @include mq(small) {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        li {
+          background-color: $bg-light;
+          padding: 2.5rem;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+          }
+          @include mq(small) {
+            padding: 5rem;
+          }
+
+          h3 {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            line-height: 1.2;
+            margin-bottom: 2rem;
+          }
+
+          img {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      button {
+        background-color: $secondary-color;
+        color: $white;
+        margin: 2rem 0;
+      }
+    }
+  }
+
+  .nitro-plans {
+    margin: 10rem 0;
+    .container {
+      background-color: $bg-light;
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      @include mq(small) {
+        padding: 8rem 10rem;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .check,
+      .x {
+        width: 2rem;
+        aspect-ratio: 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .check {
+        background-image: url(../assets/img/check-lg.svg);
+      }
+
+      .x {
+        background-image: url(../assets/img/x-lg.svg);
+      }
+
+      table {
+        width: 100%;
+        // font-size: 1.8rem;
+        margin-top: 2.5rem;
+        border-collapse: collapse;
+
+        tr {
+          border-bottom: 1px solid #c7ccd1;
+
+          &:first-child {
+            td:nth-child(3) {
+              border-top: 2px solid #b845c1;
+            }
+          }
+
+          &:last-child {
+            border-bottom: none;
+            td:nth-child(3) {
+              border-bottom: 2px solid #b845c1;
+            }
+          }
+        }
+
+        td {
+          padding: 1.5rem;
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            text-align: center;
+            span {
+              display: block;
+              margin: 0 auto;
+            }
+          }
+
+          &:nth-child(3) {
+            border-left: 2px solid #b845c1;
+            border-right: 2px solid #b845c1;
+            &:first {
+              background-color: red;
+            }
+          }
+        }
+
+        button {
+          color: white;
+          background-color: #5865f2;
+        }
+      }
+    }
+  }
+
+  .nitro-faq {
+    margin-bottom: 10rem;
+    @include mq(small) {
+      background-image: url(https://assets-global.website-files.com/6257adef93867e50d84d30e2/633c218c78fdb568bd88e308_Group%20482467.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+
+    .container {
+      @include mq(small) {
+        padding: 0 5rem;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      .faq-nav {
+        display: flex;
+        justify-content: center;
+
+        li {
+          padding: 1rem;
+          cursor: pointer;
+          color: #72767d;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+
+      .accordion {
+        margin-top: 1rem;
+        display: grid;
+        gap: 1.5rem;
+        transition: all 0.3s ease;
+
+        li {
+          padding: 2.5rem;
+          background-color: $bg-light;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        &-title {
+          font-size: 2rem;
+          font-weight: bold;
+          position: relative;
+          padding-right: 3rem;
+
+          &::before {
+            content: "+";
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            width: 2.5rem;
+            aspect-ratio: 1;
+            font-size: 2.3rem;
+            color: $secondary-color;
+          }
+        }
+
+        &-des {
+          font-size: 1.6rem;
+          display: none;
+          width: 90%;
+        }
+
+        .show {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .nitro-newsletter {
+    background: rgb(172, 92, 140);
+    background: url(https://assets-global.website-files.com/6257adef93867e50d84d30e2/6347d64619cdc4bd80037cbe_Group%20482478.svg),
+      linear-gradient(313deg, rgba(172, 92, 140, 1) 32%, rgba(133, 71, 198, 1) 76%);
+    background-repeat: no-repeat;
+    background-position: top 10% center;
+    @include mq(small) {
+      background: url(https://assets-global.website-files.com/6257adef93867e50d84d30e2/63495c4907d2bd0ac38fb771_Group%20482479.svg),
+        url(https://assets-global.website-files.com/6257adef93867e50d84d30e2/63495c5f446cd73f82366c8f_Group%20482480.svg),
+        url(https://assets-global.website-files.com/6257adef93867e50d84d30e2/6347d64619cdc4bd80037cbe_Group%20482478.svg),
+        linear-gradient(313deg, rgba(172, 92, 140, 1) 32%, rgba(133, 71, 198, 1) 76%);
+      background-repeat: no-repeat;
+      background-position: right, left, top 10% center;
+    }
+
+    .container {
+      color: $white;
+      padding: 10rem 2.5rem;
+      text-align: center;
+
+      h3 {
+        font-size: 3.5rem;
+        line-height: 120%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      button {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        padding: 1.5rem 5rem;
+      }
+    }
+  }
+}

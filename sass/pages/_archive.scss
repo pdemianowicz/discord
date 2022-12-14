@@ -1,0 +1,27 @@
+.archive-title {
+  text-align: center;
+  padding: 2rem;
+  background-color: $bg-light;
+}
+
+.container-archive {
+  padding: 5.5rem 2.5rem;
+  display: grid;
+  gap: 4rem;
+  @include mq(small) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card-post {
+    img {
+      width: 100%;
+      height: 205px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      line-height: 1.2;
+      margin-top: 1rem;
+    }
+  }
+}

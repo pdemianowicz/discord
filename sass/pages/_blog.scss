@@ -1,0 +1,31 @@
+.blog-header {
+  background-color: $primary-color;
+  color: $white;
+  padding: 5.5rem 2.5rem;
+  text-align: center;
+}
+
+.blog-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5.5rem 2.5rem;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: 1fr;
+  @include mq(small) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .card-post {
+    img {
+      width: 304px;
+      height: 170px;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      flex-wrap: wrap;
+    }
+  }
+}
