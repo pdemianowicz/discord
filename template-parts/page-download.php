@@ -7,6 +7,12 @@
 defined( 'ABSPATH' ) || exit; get_header(); ?> 
 
 
+<?php 
+
+$heroImage = get_field('hero_image');
+
+?>
+
 <div class="page-download">
     <section class="hero">
         <div class="container">
@@ -18,7 +24,15 @@ defined( 'ABSPATH' ) || exit; get_header(); ?>
                     <span>Windows 7 or higher</span>
                 </div>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/download-hero.svg" alt="">
+
+            <img src="
+                <?php if( $heroImage ){
+                    echo $heroImage;
+                } else {
+                    echo get_template_directory_uri();?>/assets/img/download-hero.svg
+                <?php } ?>
+                    " alt="<?php echo get_field("alt_for_image"); ?>">
+            
         </div>
     </section>
 
